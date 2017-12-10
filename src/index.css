@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  width: 700px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #b41f1f;
+  border: solid 5px #eebf77;
+  border-radius: 3px;
+}
+
+.App h2 {
+  text-align: center;
+  color: #eebf77;
+}
+
+.App div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #eebf77;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.App form {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.App form >* {
+  flex: 1;
+}
+
+.App form label {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.App form label p {
+  color: #eebf77;
+}
+
+.App form input, .App form select {
+  outline: none;
+  border: solid 2px  #eebf77;
+  padding: 4px;
+  border-radius: 3px;
+  background: #f65656;
+  color:  #fff;
+}
+
+.App form input[type="submit"] {
+  background: #b41f1f;
+  color: #fff;
+  padding: 5px;
+}
+.App form input[type="submit"]:hover {
+  background: #eebf77;
+}
+
+.App p:last-child {
+  color: #eebf77;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
