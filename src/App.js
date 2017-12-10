@@ -12,7 +12,7 @@ class App extends Component {
     this.handleParas = this.handleParas.bind(this);
     this.handleType = this.handleType.bind(this);
     this.handleFormat = this.handleFormat.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       paras: 2,
@@ -39,24 +39,24 @@ class App extends Component {
   handleParas(e) {
     this.setState({
       paras: e.target.value
-    })
+    }, this.getText)
   }
 
   handleType(e) {
     this.setState({
       type: e.target.value
-    })
+    }, this.getText)
   }
 
   handleFormat(e) {
     this.setState({
       format: e.target.value
-    })
+    }, this.getText)
   }
 
-  handleSubmit() {
-    this.getText();
-  }
+  // handleSubmit() {
+  //   this.getText();
+  // }
 
   render() {
     const { paras, type, format, text } = this.state;
@@ -70,7 +70,7 @@ class App extends Component {
          handleParas={this.handleParas}
          handleType={this.handleType}
          handleFormat={this.handleFormat}
-         handleSubmit={this.handleSubmit}
+         // handleSubmit={this.handleSubmit}
           />
         <Output text={text}/>
 

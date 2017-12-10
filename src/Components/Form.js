@@ -7,7 +7,7 @@ class Form extends Component {
     this.handleNumParas = this.handleNumParas.bind(this);
     this.handleType = this.handleType.bind(this);
     this.handleFormat = this.handleFormat.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleNumParas(num) {
@@ -22,15 +22,17 @@ class Form extends Component {
     this.props.handleFormat(format);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.handleSubmit();
-  }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   this.props.handleSubmit();
+  // }
 
   render() {
     const { paras, type, format } = this.props;
+    //<form onSubmit={this.handleSubmit}
+    // <input type="submit" value="Get Bacon ipsum" />
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
 
         <label htmlFor="num-paras">
           <p># of paragraphs</p>
@@ -52,7 +54,6 @@ class Form extends Component {
             <option value="text">text</option>
           </select>
         </label>
-        <input type="submit" value="Get Bacon ipsum" />
       </form>
     )
   }
